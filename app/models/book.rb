@@ -1,5 +1,3 @@
-require 'open-uri'
-
 class Book < ActiveRecord::Base
   
   has_attached_file :image,
@@ -14,7 +12,5 @@ class Book < ActiveRecord::Base
   validates :title,
     presence: true,
     length: { minimum: 1, maximum: 255 }
-
-
 
 end
